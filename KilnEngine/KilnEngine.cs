@@ -14,6 +14,8 @@ namespace Kiln.KilnEngine
     {
 
         public static KilnEngine Instance;
+        public static Random rand = new Random();
+
 
         public KilnEngine() : base()
         {

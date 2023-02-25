@@ -14,6 +14,11 @@
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+    <!--<LangVersion>10.0/LangVersion>-->
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +43,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -49,6 +55,10 @@
       <HintPath>..\..\..\..\important stuff\FNA-2301\FNA\bin\Debug\FNA.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -60,11 +70,24 @@
     <Compile Include="KilnEngine\Drawing\AdditiveDrawing.cs" />
     <Compile Include="KilnEngine\Graphics\SpriteBatchCache.cs" />
     <Compile Include="KilnEngine\Helpers\LevelGenHelper.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.Decimal2.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.Decimal3.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.Enums.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.Hashing.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseCellular.Cells.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseCellular.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseCubic.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoisePerlin.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseSimplex.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseValue.cs" />
+    <Compile Include="KilnEngine\Helpers\Noise\FastNoise.NoiseWhite.cs" />
     <Compile Include="KilnEngine\Helpers\ReflectionHelper.cs" />
     <Compile Include="KilnEngine\Interfaces\IDrawAdditive.cs" />
     <Compile Include="KilnEngine\Interfaces\ILoadable.cs" />
     <Compile Include="KilnEngine\KilnEngine.cs" />
     <Compile Include="KilnEngine\Systems\ParticleSystem\Particle.cs" />
+    <Compile Include="KilnEngine\Systems\ParticleSystem\ParticleHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
